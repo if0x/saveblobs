@@ -31,6 +31,7 @@ else
     echo "ERROR"
     echo "wrong number"
 fi
+echo "creating a savefile"
 while [ $i -le $idevice_number ]
     do  count=$(( $count+1 ))
         echo "lets talk about your $count iDevice now"
@@ -71,7 +72,7 @@ while [ $i -le $idevice_number ]
             then read idevice_name10
                 echo "idevice_name10='$idevice_name10'" >> ./Resources/SaveBlobs
         fi
-        echo "lets talk about your $count iDevice ECID"
+        echo "Enter your $count iDevice ECID"
         if [ $count = 1 ]
             then read idevice_ecid1
                 echo "idevice_ecid1='$idevice_ecid1'" >> ./Resources/SaveBlobs
@@ -103,7 +104,7 @@ while [ $i -le $idevice_number ]
             then read idevice_ecid10
                 echo "idevice_ecid10='$idevice_ecid10'" >> ./Resources/SaveBlobs
         fi
-        echo "lets talk about your $count iDevice identifer"
+        echo "Enter your $count iDevice identifer"
         echo "for example iPhone9,3 or iPad6,3"
         if [ $count = 1 ]
             then read idevice_id1

@@ -9,8 +9,12 @@ saveblobs(){
 saveblobswithbuild(){
 	./Resources/tsschecker* -d "$idevice_id" -e "$idvice_ecid" -i "$version" --buildid "$build" -s 
 }
+saveblobswithapnonce(){
+	./Resources/tsschecker* -d "$idevice_id" -e "$idvice_ecid" -i "$version"  -s 
+
+}
 main(){
-	echo " For wich iOS Vesion you want save Blobs?"
+	echo " For wich iOS version you want save Blobs?"
 	read version
 	echo "any specific build? if not just hit enter"
 	read build

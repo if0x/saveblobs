@@ -2,6 +2,7 @@
 
 #  SaveBlobs.sh
 #created by @if0xxx
+#updated by @2Klasic & @if0xxx
 #save em all
 saveblobs(){
 	./Resources/tsschecker* -d "$idevice_id" -e "$idevice_ecid" -i "$version" -s 

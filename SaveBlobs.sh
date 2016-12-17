@@ -7,14 +7,10 @@ saveblobs(){
 	./Resources/tsschecker* -d "$idevice_id" -e "$idevice_ecid" -i "$version" -s 
 }
 saveblobswithbuild(){
-	./Resources/tsschecker* -d "$idevice_id" -e "$idvice_ecid" -i "$version" --buildid "$build" -s 
-}
-saveblobswithapnonce(){
-	./Resources/tsschecker* -d "$idevice_id" -e "$idvice_ecid" -i "$version"  -s 
-
+	./Resources/tsschecker* -d "$idevice_id" -e "$idevice_ecid" --buildid "$build" -s 
 }
 main(){
-	echo " For wich iOS version you want save Blobs?"
+	echo " Which iOS version do you want to save Blobs?"
 	read version
 	echo "any specific build? if not just hit enter"
 	read build
@@ -34,7 +30,7 @@ run(){
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name1"/"$version"/"$build"
-				mv ./*.shsh2 ./Blobs/"$idevice_name1"/"$version"/"$build"
+				mv ./*.shsh2 ./Blobs/"$idevice_name1"/"$build"
 			fi
         elif [ $count = 2 ]
             then idevice_id="$idevice_id2"
@@ -46,7 +42,7 @@ run(){
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name2"/"$version"/"$build"
-				mv ./*.shsh2 ./Blobs/"$idevice_name2"/"$version"/"$build"
+				mv ./*.shsh2 ./Blobs/"$idevice_name2"/"$build"
 			fi
         elif [ $count = 3 ]
             then idevice_id="$idevice_id3"
@@ -58,7 +54,7 @@ run(){
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name3"/"$version"/"$build"
-				mv ./*.shsh2 ./Blobs/"$idevice_name3"/"$version"/"$build"
+				mv ./*.shsh2 ./Blobs/"$idevice_name3"/"$build"
 			fi
         elif [ $count = 4 ]
             then ridevice_id="$idevice_id4"
@@ -70,7 +66,7 @@ run(){
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name4"/"$version"/"$build"
-				mv ./*.shsh2 ./Blobs/"$idevice_name4"/"$version"/"$build"
+				mv ./*.shsh2 ./Blobs/"$idevice_name4"/"$build"
 			fi
         elif [ $count = 5 ]
             then idevice_id="$idevice_id5"
@@ -82,7 +78,7 @@ run(){
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name5"/"$version"/"$build"
-				mv ./*.shsh2 ./Blobs/"$idevice_name5"/"$version"/"$build"
+				mv ./*.shsh2 ./Blobs/"$idevice_name5"/"$build"
 			fi
         elif [ $count = 6 ]
             then idevice_id="$idevice_id6"
@@ -94,7 +90,7 @@ run(){
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name6"/"$version"/"$build"
-				mv ./*.shsh2 ./Blobs/"$idevice_name6"/"$version"/"$build"
+				mv ./*.shsh2 ./Blobs/"$idevice_name6"/"$build"
 			fi
         elif [ $count = 7 ]
             then idevice_id="$idevice_id7"
@@ -106,7 +102,7 @@ run(){
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name7"/"$version"/"$build"
-				mv ./*.shsh2 ./Blobs/"$idevice_name7"/"$version"/"$build"
+				mv ./*.shsh2 ./Blobs/"$idevice_name7"/"$build"
 			fi
         elif [ $count = 8 ]
             then idevice_id="$idevice_id8"
@@ -118,7 +114,7 @@ run(){
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name8"/"$version"/"$build"
-				mv ./*.shsh2 ./Blobs/"$idevice_name8"/"$version"/"$build"
+				mv ./*.shsh2 ./Blobs/"$idevice_name8"/"$build"
 			fi
         elif [ $count = 9 ]
             then idevice_id="$idevice_id9"
@@ -130,7 +126,7 @@ run(){
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name9"/"$version"/"$build"
-				mv ./*.shsh2 ./Blobs/"$idevice_name9"/"$version"/"$build"
+				mv ./*.shsh2 ./Blobs/"$idevice_name9"/"$build"
 			fi
         elif [ $count = 10 ]
             then idevice_id="$idevice_id10"
@@ -142,9 +138,8 @@ run(){
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name10"/"$version"/"$build"
-				mv ./*.shsh2 ./Blobs/"$idevice_name10"/"$version"/"$build"
+				mv ./*.shsh2 ./Blobs/"$idevice_name10"/"$build"
 			fi
         fi
     done
 }
-

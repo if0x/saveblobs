@@ -2,16 +2,15 @@
 
 #  SaveBlobs.sh
 #created by @if0xxx
-#updated by @2Klasic & @if0xxx
 #save em all
 saveblobs(){
 	./Resources/tsschecker* -d "$idevice_id" -e "$idevice_ecid" -i "$version" -s 
 }
 saveblobswithbuild(){
-	./Resources/tsschecker* -d "$idevice_id" -e "$idevice_ecid" --buildid "$build" -s 
+	./Resources/tsschecker* -d "$idevice_id" -e "$idevice_ecid" -i "$version" --buildid "$build" -s 
 }
 main(){
-	echo " Which iOS version do you want to save Blobs?"
+	echo " For wich iOS Vesion you want save Blobs?"
 	read version
 	echo "any specific build? if not just hit enter"
 	read build
@@ -135,7 +134,7 @@ run(){
             if [ "$build" = "" ]
 				then saveblobs
 				mkdir -p ./Blobs/"$idevice_name10"/"$version"
-				mv ./*.shsh2 ./Blobs/"$idevice_name10""$version"
+				mv ./*.shsh2 ./Blobs/"$idevice_name10"/"$version"
 			else 	
 				saveblobswithbuild
 				mkdir -p ./Blobs/"$idevice_name10"/"$version"/"$build"
@@ -144,3 +143,15 @@ run(){
         fi
     done
 }
+i=1
+count=0
+idevice_number='1'
+idevice_name1=''
+idevice_ecid1=''
+idevice_id1=''
+i=1
+count=0
+idevice_number='1'
+idevice_name1='1'
+idevice_ecid1=''
+idevice_id1=''

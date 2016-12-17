@@ -31,9 +31,6 @@ else
     echo "ERROR"
     echo "wrong number"
 fi
-echo "creating a savefile"
-mkdir -p ./Resources/tmp
-scp -r ./Resources/SaveBlobs ./Resources/tmp
 while [ $i -le $idevice_number ]
     do  count=$(( $count+1 ))
         echo "lets talk about your $count iDevice now"

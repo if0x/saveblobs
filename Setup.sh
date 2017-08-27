@@ -18,15 +18,15 @@ read software
 if [ $software = 1 ]
     then curl -O http://api.tihmstar.net/builds/tsschecker/tsschecker-linux-latest.zip
     unzip ./tsschecker-linux-latest.zip
-    mv ./tsschecker_linux ./Resources
+    mv ./tsschecker_linux ./Resources/
     rm -rf ./latest-sha*
     rm -rf ./tsschecker-linux-latest.zip
 elif [ $software = 2 ]
-    then curl -O http://api.tihmstar.net/builds/tsschecker/tsschecker-macos-latest.zip
-    unzip ./tsschecker-macos-latest.zip
-    mv ./tsschecker_macos ./Resources
-    rm -rf ./latest-sha*
-    rm -rf ./tsschecker-macos-latest.zip
+    then curl -O http://api.tihmstar.net/builds/tsschecker/tsschecker-latest.zip
+    unzip ./tsschecker-latest.zip
+    mv ./{*_macos,*_linux} ./Resources
+    rm -rf ./{latest-sha*,*.pem,LICENSE,tsschecker_windows*,README-windows*,signature.txt}
+    rm -rf ./tsschecker-latest.zip
 else
     echo "ERROR"
     echo "wrong number"
